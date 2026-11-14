@@ -17,7 +17,12 @@ while True:
         print("\n Список задач")
         if not tasks:
             print("Задач нет")
-    else:
-        sorted_tasks = sorted(tasks, key=lambda x: x["priority"])
-        for task in sorted_tasks:
-            print(f"Приоритет: {task['priority']} | {task['title']} (До: {task['deadline']})")
+        else:
+            sorted_tasks = sorted(tasks, key=lambda x: x["priority"])
+            for task in sorted_tasks:
+                print(f"Приоритет: {task['priority']} | {task['title']} (До: {task['deadline']})")
+    elif choice == "3":
+        print("Завершение работы")
+    break
+else:
+    print("Ошибка")
