@@ -13,3 +13,11 @@ while True:
             "priority": priorit}
         tasks.append(new_task)
         print("Задача добавлена")
+    elif choice == "2":
+        print("\n Список задач")
+        if not tasks:
+            print("Задач нет")
+    else:
+        sorted_tasks = sorted(tasks, key=lambda x: x["priority"])
+        for task in sorted_tasks:
+            print(f"Приоритет: {task['priority']} | {task['title']} (До: {task['deadline']})")
